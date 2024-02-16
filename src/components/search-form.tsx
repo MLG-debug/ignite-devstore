@@ -1,9 +1,9 @@
 'use client'
 import { Search as SearchIcon } from 'lucide-react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { FormEvent, Suspense } from 'react'
+import { FormEvent } from 'react'
 
-export const Search = () => {
+export const SearchForm = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -34,13 +34,5 @@ export const Search = () => {
         className="flex-1 bg-transparent text-sm outline-none placeholder:text-zinc-500"
       />
     </form>
-  )
-}
-
-export const SearchForm = () => {
-  return (
-    <Suspense>
-      <Search />
-    </Suspense>
   )
 }
